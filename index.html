@@ -1,45 +1,45 @@
-
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NASA APOD — 9-Day Gallery</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="site-header">
-<div class="container">
-<h1>NASA Astronomy Picture of the Day — 9-Day Gallery</h1>
-<div class="controls">
-<label for="startDate">Start date:</label>
-<input id="startDate" type="date" max="9999-12-31" />
-<button id="fetchBtn">Fetch 9 Days</button>
-</div>
-</div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
 
-<main class="container">
-<p id="loadingMsg" class="loading hidden">Loading images…</p>
-<div id="gallery" class="gallery" aria-live="polite"></div>
-</main>
+  <body>
+    <header>
+      <h1>NASA Astronomy Picture of the Day</h1>
+      <div class="date-selector">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" />
+        <button id="fetchBtn">Fetch 9 Days</button>
+      </div>
+    </header>
 
 
-<!-- Modal -->
-<div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
-<div class="modal-inner">
-<button class="modal-close" aria-label="Close">×</button>
-<img id="modalImg" alt="APOD full size"/>
-<div class="modal-meta">
-<h2 id="modalTitle"></h2>
-<p id="modalDate"></p>
-<p id="modalDesc"></p>
-</div>
-</div>
-</div>
+    <main>
+      <p id="loadingMsg" class="loading" style="display:none">Loading images...</p>
+      <div id="gallery" class="gallery"></div>
+    </main>
 
 
-<script src="script.js"></script>
-</body>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImg" alt="Full Size Image" />
+        <div class="modal-info">
+          <h2 id="modalTitle"></h2>
+          <p id="modalDate"></p>
+          <p id="modalDesc"></p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
 </html>

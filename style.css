@@ -1,0 +1,154 @@
+/* style.css */
+
+
+:root {
+  --nasa-blue: #0b3d91;
+  --nasa-red: #e31b23;
+  --bg-dark: #041230;
+  --card-bg: #072146;
+  --text-light: #cfd8e3;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(180deg, var(--bg-dark), #020c1f);
+  color: var(--text-light);
+  text-align: center;
+}
+
+
+header {
+  background: linear-gradient(90deg, var(--nasa-blue), #093a7a);
+  border-bottom: 4px solid var(--nasa-red);
+  padding: 20px;
+}
+
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+
+.date-selector {
+  margin-top: 10px;
+}
+
+
+input[type="date"],
+button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+}
+
+
+button {
+  background-color: var(--nasa-red);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #ff4b5c;
+}
+
+
+.loading {
+  font-size: 1.1em;
+  margin-top: 20px;
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.gallery-item {
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.gallery-item h3 {
+  margin: 10px 0 5px;
+  color: var(--nasa-red);
+}
+
+
+.gallery-item p {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background: #1a1a1a;
+  border-radius: 10px;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  color: white;
+}
+
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.close:hover {
+  color: var(--nasa-red);
+}
+
+
